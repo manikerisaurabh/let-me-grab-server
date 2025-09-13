@@ -1,0 +1,15 @@
+CREATE TABLE Employee (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    department_id INT,
+    name VARCHAR(255) NOT NULL,
+    dob DATE NOT NULL,
+    phone VARCHAR(255) NOT NULL UNIQUE,
+    photo VARCHAR(255),
+    email VARCHAR(255) NOT NULL UNIQUE,
+    salary DECIMAL(10, 2) NOT NULL,
+    status ENUM('active', 'inactive') DEFAULT 'active',
+    created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    modified TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (department_id) REFERENCES Department(id) ON DELETE
+    SET NULL
+);
