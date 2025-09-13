@@ -76,3 +76,25 @@ It includes CRUD operations, paging, duplicate contact validation, phone encrypt
 git clone https://github.com/your-username/employee-management.git
 cd employee-management
 ```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Create .env and use your credentials
+
+```bash
+PORT=your_port
+DB_HOST=your_host
+DB_USER=your_root
+DB_PASSWORD=your_password
+DB_NAME=your_database_name
+```
+
+### 4. Run server
+
+```bash
+node server.js
+```
